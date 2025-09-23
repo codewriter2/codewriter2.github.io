@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4차시</title>
+    <style>
+        table{
+            width: 400px;
+            background-color: rgb(222, 202, 242);
+        }
+    </style>
+    </head>
+    <body>
+        표만들기
+        <table border="1">
+            <tr><td>1-1</td><td>1-2</td></tr>
+        </table>
+
+        <table border="1" cellspacing="0">
+            <tr>
+                <th>Month</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td style="text-align:right">$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td style="text-align:right">$80</td>
+            </tr>
+        </table>
+
+        <table border="1" style="width:50%; text-align: center;">
+            <tr style="height:70px;background-color: beige;">
+                <th>Month</th>
+                <th>Day</th>
+                <th>Savings</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>1</td>
+                <td>$100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td>5</td>
+                <td rowspan="2">$80</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td colspan="2">TOTAL</td>
+                <td>$180</td>
+            </tr>
+        </table>
+    </body>
+</html>
