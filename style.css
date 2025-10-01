@@ -1,0 +1,62 @@
+header {
+  align-items: center;
+  padding: 16px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #111;
+}
+
+nav{
+  text-align: right;
+  margin-right:50px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+nav a:hover {
+  color: #0d010b;   /* hover 시 포인트 컬러 */
+}
+.highlight{
+  text-align: center;
+}
+ul, ol {
+  list-style: none;   /* ●, 1. 같은 표시 제거 */
+  margin: 0;          /* 브라우저 기본 바깥 여백 제거 */
+  padding: 0;         /* 브라우저 기본 안쪽 여백 제거 */
+}
+/* 레이아웃 래퍼 */
+#content {
+  display: flex;
+  gap: 20px;          /* 박스 사이 간격 */
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+/* 왼쪽 본문 */
+#main {
+  flex: 1;            /* 남은 공간 차지 */
+  background:#fafafa; /* 보기 쉽게 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 오른쪽 리스트뷰 */
+#listview {
+  flex: 0 0 300px;    /* 폭 고정 (300px) */
+  background:#ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto;       /* 내용에 맞춰 늘어나도록 */
+  border-radius: 8px;
+}
