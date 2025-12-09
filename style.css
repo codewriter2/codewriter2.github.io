@@ -24,8 +24,14 @@ nav{
   color: #333;
   font-weight: 500;
 }
+nav a {
+  text-decoration: none;   /* << 밑줄 제거 */
+  color: #333;
+  font-weight: 500;
+}
+
 nav a:hover {
-  color: #0d010b;   /* hover 시 포인트 컬러 */
+  color: #0d010b;
 }
 .highlight{
   text-align: center;
@@ -60,3 +66,4 @@ ul, ol {
   height: auto;       /* 내용에 맞춰 늘어나도록 */
   border-radius: 8px;
 }
+
