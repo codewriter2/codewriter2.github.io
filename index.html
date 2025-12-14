@@ -21,7 +21,7 @@
     <header>
         <h1>Log of S</h1>
         <nav>
-            <a href="#">Lecture/</a>
+            <a href="#lecture">Lecture/</a>
             <a href="#booklog">Book&Movielog/</a>
             <a href="#art">Artlogue/</a>
             <a href="#repo">Repository/</a>
@@ -34,13 +34,50 @@
         <p>단순함 속에 집중된 선택을 담은 공간</p>
     </section>
 
+    <!-- Lecture Section -->
+    <section id="lecture">
+        <h2>Lecture</h2>
+        <p>지식과 경험을 나누는 시간</p>
+        <div class="card-container"
+            style="text-align: center; padding: 4rem 0; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--border-color);">
+            <p>강의 자료 및 일정은 노션에서 관리됩니다.</p>
+            <a href="#" onclick="alert('노션 링크를 연결해주세요!'); return false;" class="btn-more">View on Notion →</a>
+        </div>
+    </section>
+
     <section id="booklog">
         <h2>Book & Movie</h2>
         <p>책과 영화 이야기</p>
-        <div id="content">
-            <iframe src="https://weak-particle-016.notion.site/ebd//28fdb03ea0358027b8adfdcc4d8fe169" width="100%"
-                height="850px" frameborder="0" allowfullscreen></iframe>
+
+        <!-- Tab Navigation -->
+        <div class="iframe-tabs">
+            <button class="tab-btn active"
+                onclick="changeBookTab(this, 'https://weak-particle-016.notion.site/ebd//28fdb03ea0358027b8adfdcc4d8fe169')">Reviews</button>
+            <button class="tab-btn"
+                onclick="changeBookTab(this, 'https://weak-particle-016.notion.site/ebd//29adb03ea035807cbfd6fa0194545c21')">Transcriptions</button>
+            <button class="tab-btn" onclick="alert('추천 메뉴 페이지를 준비 중입니다.')">Recommendations</button>
         </div>
+
+        <div id="content">
+            <iframe id="book-iframe" src="https://weak-particle-016.notion.site/ebd//28fdb03ea0358027b8adfdcc4d8fe169"
+                width="100%" height="850px" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <script>
+            function changeBookTab(btn, url) {
+                // Update Iframe Source
+                if (url) {
+                    document.getElementById('book-iframe').src = url;
+                }
+
+                // Update Button Styles
+                var buttons = document.getElementsByClassName('tab-btn');
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].classList.remove('active');
+                }
+                btn.classList.add('active');
+            }
+        </script>
     </section>
 
     <section id="art">
