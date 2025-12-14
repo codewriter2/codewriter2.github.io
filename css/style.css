@@ -201,11 +201,20 @@ section {
 }
 
 #booklog iframe {
+    height: 850px;
+    /* Desktop Default */
     border-radius: 12px;
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     /* Lighter shadow for white theme */
     background: #fff;
+}
+
+@media (max-width: 768px) {
+    #booklog iframe {
+        height: 1300px;
+        /* Taller on mobile to show more content */
+    }
 }
 
 /* Art Section */
